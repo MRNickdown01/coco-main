@@ -1,0 +1,350 @@
+.nav-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: 0px 10px 32px rgb(59 74 116 / 16%);
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+.header-button {
+  margin-right: 8rem;
+}
+.header-button > a > .sign-in {
+  font-size: 16px;
+  background-color: #0a7986;
+  border-radius: 50px 50px 50px 50px;
+  box-shadow: 0px 2px 7px 0px rgb(0 0 0 / 20%);
+  padding: 15px 36px 15px 36px;
+  color: #fff;
+  font-family: "museo-sans", sans-serif;
+  border: none;
+  transition: transform 0.25s ease;
+}
+.header-button > a {
+  text-decoration: none;
+}
+.header-button > .login {
+  font-size: 20px;
+  color: #292f36;
+  font-family: "museo-sans", sans-serif;
+  font-weight: 600;
+  transition: transform 0.25s ease;
+}
+
+.header-button > .sign-in:hover {
+  transform: scale(1.1);
+}
+.header-button > .login:hover {
+  color: #0a7986;
+}
+.header-button {
+  gap: 20px;
+}
+.main-page {
+  text-align: center;
+  margin-top: 10%;
+}
+.title {
+  margin: 0px 10%;
+}
+.title > h4 {
+  color: #292f36;
+  font-family: "Poppins", sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.1em;
+}
+.title > p {
+  margin: 3% 4%;
+  color: #292f36;
+  font-family: "museo-sans", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6em;
+  text-align: center;
+}
+
+.earanoption {
+  padding-top: 40px;
+}
+
+.arrow-container {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+}
+
+.arrow-1 {
+  width: 100px;
+  height: 100px;
+  background: #f30659;
+  opacity: 0.5;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.arrow-2 {
+  width: 60px;
+  height: 60px;
+  background: #f30659;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  display: table;
+}
+
+.arrow-2:before {
+  width: 52px;
+  height: 52px;
+  content: "";
+  border: 2px solid #f30659;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+.arrow-2 i.fa {
+  font-size: 30px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Custom Animate.css */
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.4, 0.4, 0.4);
+    transform: scale3d(0.4, 0.4, 0.4);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.4, 0.4, 0.4);
+    transform: scale3d(0.4, 0.4, 0.4);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+.cards-list {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.card {
+  margin: 30px auto;
+  width: 160px;
+  height: 160px;
+  border-radius: 16px;
+  box-shadow: 0px 16px 24px rgb(8 35 48 / 6%);
+  border: none;
+}
+
+.card .card_image img {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+}
+
+.title-white {
+  color: white;
+}
+
+.title-black {
+  color: black;
+}
+.header {
+  margin: 20px 0px;
+}
+.title-logo {
+  color: #1c5a40;
+  font-family: "museo-sans", sans-serif;
+  font-size: 31px;
+  font-weight: 800;
+  margin-left: 8rem;
+}
+.footerType {
+  background-color: #f9f9f9;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+.footerTypeinfo > p {
+  font-family: "museo-sans", sans-serif;
+}
+.footerTypeinfo > a > button {
+  margin-top: 20px;
+  font-size: 16px;
+  background-color: #0a7986;
+  border-radius: 50px 50px 50px 50px;
+  box-shadow: 0px 2px 7px 0px rgb(0 0 0 / 20%);
+  padding: 15px 36px 15px 36px;
+  color: #fff;
+  font-family: "museo-sans", sans-serif;
+  border: none;
+  transition: transform 0.25s ease;
+}
+.footerTypeinfo > a > button:hover {
+  transform: scale(1.1);
+}
+footer {
+  background-color: #292f36;
+  height: 100px;
+  padding: 0px 50px;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer > .footertext {
+  padding-top: 15px;
+}
+.footer > .footertext > p {
+  font-family: "museo-sans", sans-serif;
+  letter-spacing: 1px;
+  padding: 25px 0px;
+  font-size: 14px;
+  color: #bbbfc3;
+  text-align: center;
+  transition: transform 0.25s ease;
+}
+.iconList > .iconBg > i {
+  color: #292f36;
+}
+.iconList > .iconBg {
+  padding: 6px 11px;
+  background-color: #bbbfc3;
+  border-radius: 50%;
+}
+
+.iconList > .iconBg:hover {
+  background-color: #fff;
+}
+.iconList {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+.subMaincontainer2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.subContainercard1 > img {
+  width: 150px;
+}
+.subContainer > .container > h3 {
+  margin: 80px 0px;
+  color: #292f36;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: -0.9px;
+  font-size: 36px;
+  font-family: "museo-sans", sans-serif;
+}
+@media all and (max-width: 1000px) {
+  .main-page {
+    margin-top: 15%;
+  }
+}
+@media all and (max-width: 768px) {
+  .subEranOption {
+    flex-wrap: wrap;
+  }
+  .main-page {
+    margin-top: 25%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  footer {
+    padding-bottom: 20px;
+    height: auto;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .earanoption > .container > .title > h4 {
+    margin: 0px 0px;
+  }
+  .title > h4 {
+    font-size: 25px;
+  }
+  .title {
+    margin: 0px 0px;
+  }
+  .title > p {
+    text-align: start;
+  }
+  .footerType {
+    padding-bottom: 15%;
+  }
+  .header-button {
+    flex-wrap: wrap;
+    justify-content: end;
+    gap: 10px;
+  }
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+  .main-page {
+    margin-top: 30%;
+  }
+  .title-logo {
+    margin-left: 1rem;
+  }
+  .header-button {
+    margin-right: 1rem;
+  }
+}

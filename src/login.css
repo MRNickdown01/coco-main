@@ -1,0 +1,176 @@
+.imageSide {
+  float: left;
+  width: 50%;
+}
+.imageSide > img {
+  width: 100%;
+  height: 80%;
+}
+.mainCard1 {
+  float: right;
+  width: 50%;
+  margin: 150px 0px;
+  display: flex;
+  justify-content: center;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.mainCard1 > .card {
+  padding: 0px 40px;
+}
+.inputDetil {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  align-items: center;
+}
+.inputDetil > button {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  margin: 20px 0px;
+  /* background: aqua; */
+}
+.inputDetil > input {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+}
+.inputDetil > button > .btn-text {
+  text-align: center;
+}
+/* .emailIcon {
+  margin-top: 50px;
+} */
+.emailIcon > i {
+  font-size: 80px;
+  margin-bottom: 30px;
+  /* color: #fa900f; */
+}
+.emailIcon > p {
+  font-size: 18px;
+}
+.heading {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* .magicIcon {
+  margin-top: 50px;
+} */
+/* .magicImg {
+  position: absolute;
+  z-index: 1;
+  background-color: aqua;
+  width: 150px;
+  border-radius: 150px;
+}
+.magicImg > img {
+  width: 50px;
+} */
+.mainCard2 {
+  float: right;
+  width: 50%;
+  margin: 150px 0px;
+  display: flex;
+  justify-content: center;
+}
+.mainCard2 > .card {
+  padding: 0px 40px;
+}
+.magicIcon > i {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+.magiclIcon > p {
+  font-size: 18px;
+}
+.inputMagic {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  align-items: center;
+}
+.inputMagic > button {
+  width: auto;
+  height: 40px;
+  border-radius: 10px;
+  margin: 20px 0px;
+}
+
+.inputMagic > input {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  padding: 15px;
+}
+.magicinputIcon > .magicBicon {
+  position: absolute;
+  width: 32px;
+  height: 38px;
+  top: 1px;
+  right: 1px;
+  border-radius: 4px;
+}
+.magicinputIcon > .magicBicon > i {
+  font-size: 18px;
+}
+
+.inputMagic > button > .btn-text {
+  text-align: center;
+}
+.mainCard {
+  float: right;
+  width: 50%;
+  margin: 150px 0px;
+  display: flex;
+  justify-content: center;
+}
+form {
+  margin: auto;
+}
+.profilecard > label {
+  display: flex;
+  text-align: left;
+  width: auto;
+  font-size: 15px;
+  padding-bottom: 6px;
+}
+.profilecard > input {
+  width: auto;
+}
+
+.profile-btn > button {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  margin: 20px 0px;
+}
+.magicRadio {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+@media screen and (max-width: 468px) {
+  .mainCard {
+    margin: 100px 20px;
+  }
+  .mainCard > .card {
+    width: 100%;
+    height: 100%;
+  }
+  .inputDetil > button {
+    width: auto;
+  }
+  .profilecard > input {
+    width: 100% !important;
+  }
+  .profile-btn > button {
+    width: auto !important;
+  }
+}
