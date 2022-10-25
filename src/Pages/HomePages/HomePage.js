@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-import "./landing.css";
+import "./Style.css";
 import { useRef } from "react";
-import GettingStarted from "./GettingStarted";
+import GettingStarted from "../../GettingStarted";
 
-const LendingPage = () => {
+const HomePage = () => {
   const ref = useRef(null);
   const [state, setState] = useState(false);
   const [nav, setnav] = useState(false);
@@ -259,4 +259,4 @@ const LendingPage = () => {
     </>
   );
 };
-export default LendingPage;
+export default HomePage;

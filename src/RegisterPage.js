@@ -5,11 +5,10 @@ import React from "react";
 import image from "./Image.png";
 import { useState, useEffect } from "react";
 import pencil from "./pencil.png";
-import "./landing.css";
+import "../src/Pages/HomePages/Style.css";
 
 function Home() {
   const [state, setState] = useState(false);
-  const [value, setValue] = useState("");
   const [edit, setEdit] = useState(true);
   const [user, setUser] = useState({
     email: {

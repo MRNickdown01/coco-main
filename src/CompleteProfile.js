@@ -1,7 +1,7 @@
 import React from "react";
 import image from "./Image.png";
-import "./landing.css";
-
+import "../src/Pages/HomePages/Style.css";
+import $ from "jquery";
 function CompleteProfile() {
   return (
     <div className="funny">
@@ -81,19 +81,15 @@ function CompleteProfile() {
               style={{
                 fontFamily: "CenturyGothic",
                 outline: "none",
-                // borderStyle: "none",
                 borderColor: "#1C5A40",
               }}
-              //   onChange={(e) => {
-              //     let value = e.target.value;
-              //     onInputChange("email", value);
-              //   }}
               type="date"
               id="form3Example3"
               className="form-control form-control-lg"
               placeholder="DOB"
             />
           </div>
+
           <label>Gender</label>
           <div>
             <div className="form-check form-check-inline">
@@ -145,5 +141,4 @@ function CompleteProfile() {
     </div>
   );
 }
-
 export default CompleteProfile;

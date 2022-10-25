@@ -1,11 +1,10 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 // pages
-import Card from "./loginPage";
 import ProfilePage from "./ProfilePage";
-import LandingPage from "./landingPage";
+import HomePage from "./Pages/HomePages/HomePage";
 import ShoppingPage from "./ShoppingPage";
-import Home from "./Home";
+import RegisterPage from "./RegisterPage";
 import CompleteProfile from "./CompleteProfile";
 function App() {
   return (
@@ -18,7 +17,7 @@ function App() {
             renders the first one that matches the current URL. */}
           <Switch>
             <Route exact path="/">
-              <LandingPage />
+              <HomePage />
               {/* <Card /> */}
             </Route>
             <Route exact path="/login">
@@ -28,7 +27,7 @@ function App() {
               <ProfilePage />
             </Route>
             <Route exact path="/Register">
-              <Home />
+              <RegisterPage />
             </Route>
             <Route exact path="/completeprofile">
               <CompleteProfile />
