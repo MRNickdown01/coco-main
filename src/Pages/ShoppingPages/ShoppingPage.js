@@ -1,6 +1,6 @@
 import React from "react";
 import "./shopping.css";
-import GettingStarted from "./GettingStarted";
+import GettingStarted from "../../Components/GettingStarted";
 
 const ShoppingPages = () => {
   return (

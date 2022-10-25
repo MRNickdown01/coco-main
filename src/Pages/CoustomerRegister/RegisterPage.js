@@ -2,10 +2,10 @@ import React from "react";
 
 // import "./App.css";
 
-import image from "./Image.png";
+import image from "./assets/Image.png";
 import { useState, useEffect } from "react";
-import pencil from "./pencil.png";
-import "../src/Pages/HomePages/Style.css";
+import pencil from "./assets/pencil.png";
+import "../HomePages/Style.css";
 
 function Home() {
   const [state, setState] = useState(false);

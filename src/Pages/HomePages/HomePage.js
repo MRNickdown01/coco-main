@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import "./Style.css";
 import { useRef } from "react";
-import GettingStarted from "../../GettingStarted";
+import GettingStarted from "../../Components/GettingStarted";
 
 const HomePage = () => {
   const ref = useRef(null);
@@ -178,7 +178,7 @@ const HomePage = () => {
               <div className="container">
                 <div className="cardTypeimg">
                   <div className="scrollDown2">
-                    <a href="/login">
+                    <a href="/shopping">
                       <button>Tell Me More</button>
                     </a>
                   </div>

@@ -1,6 +1,6 @@
 import React from "react";
-import image from "./Image.png";
-import "../src/Pages/HomePages/Style.css";
+import image from "./assets/Image.png";
+import "../HomePages/Style.css";
 import $ from "jquery";
 function CompleteProfile() {
   return (

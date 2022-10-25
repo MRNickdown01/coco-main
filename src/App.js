@@ -1,11 +1,10 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 // pages
-import ProfilePage from "./ProfilePage";
 import HomePage from "./Pages/HomePages/HomePage";
-import ShoppingPage from "./ShoppingPage";
-import RegisterPage from "./RegisterPage";
-import CompleteProfile from "./CompleteProfile";
+import ShoppingPages from "./Pages/ShoppingPages/ShoppingPage";
+import RegisterPage from "./Pages/CoustomerRegister/RegisterPage";
+import CompleteProfile from "./Pages/CoustomerRegister/CompleteProfile";
 function App() {
   return (
     <div className="App">
@@ -18,14 +17,11 @@ function App() {
           <Switch>
             <Route exact path="/">
               <HomePage />
-              {/* <Card /> */}
             </Route>
-            <Route exact path="/login">
-              <ShoppingPage />
+            <Route exact path="/shopping">
+              <ShoppingPages />
             </Route>
-            <Route exact path="/update-profile">
-              <ProfilePage />
-            </Route>
+
             <Route exact path="/Register">
               <RegisterPage />
             </Route>
