@@ -31,7 +31,9 @@ const HomePage = () => {
                 COCO
               </h3>
               <div className="header-button d-flex align-items-center">
-                <h3 className="login pt-1">Login</h3>
+                <a href="Login">
+                  <h3 className="login pt-1">Login</h3>
+                </a>
                 <a href="Register">
                   <button className="sign-in">Register</button>
                 </a>

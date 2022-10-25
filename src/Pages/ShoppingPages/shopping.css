@@ -23,7 +23,7 @@
 .header-button > a {
   text-decoration: none;
 }
-.header-button > .login {
+.header-button > a > .login {
   font-size: 20px;
   color: #292f36;
   font-family: "museo-sans", sans-serif;

@@ -1,0 +1,24 @@
+.rounded-circle {
+  width: 65px;
+}
+.coupons-card {
+  display: flex;
+  column-gap: 20px;
+  justify-content: center;
+}
+.user-info {
+  margin: 0px 20px;
+}
+.card {
+  width: auto;
+  height: auto;
+  padding-bottom: 3rem;
+}
+.badge-success {
+  padding: 15px;
+  font-size: 1rem;
+  background: #4eb75f;
+  color: #fff;
+  display: inherit;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
