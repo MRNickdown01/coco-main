@@ -13,6 +13,8 @@
   width: auto;
   height: auto;
   padding-bottom: 3rem;
+  box-shadow: 0px 4px 8px rgb(0 0 0 / 16%);
+  border-radius: 16px;
 }
 .badge-success {
   padding: 15px;
@@ -21,4 +23,75 @@
   color: #fff;
   display: inherit;
   font-family: "Be Vietnam Pro", sans-serif;
+}
+.dashboardt {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 24px;
+  color: #1c5a40;
+}
+.yourtrees {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 42px;
+  display: inherit;
+  align-items: center;
+  text-align: right;
+  color: #545e7a;
+}
+
+@media screen and (max-width: 768px) {
+  #no-more-tables tbody,
+  #noimore-tables-open tbody,
+  #no-more-tables tr,
+  #noimore-tables-open tr,
+  #no-more-tables-open td,
+  #no-more-tables td {
+    display: block;
+  }
+  #no-more-tables thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  #no-more-tables td {
+    position: relative;
+    padding-left: 50%;
+    border: none;
+    border-bottom: 1px solid#eee;
+  }
+  #no-more-tables-open td {
+    position: relative;
+    border: none;
+    border-bottom: 1px solid#eee;
+    padding-left: 0%;
+  }
+  #no-more-tables td::before {
+    content: attr(data-title);
+    position: absolute;
+    left: 6px;
+    font-weight: bold;
+  }
+
+  #no-more-tables tr {
+    border-bottom: 2px solid rgb(104, 104, 104);
+  }
+  #no-more-tables-open tr {
+    border-bottom: 1px solid rgb(182, 178, 178);
+  }
+  .coupons-card {
+    flex-wrap: wrap;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .yourtrees {
+    display: flex;
+    justify-content: center;
+  }
+  .badge-success {
+    display: inline-block;
+  }
 }

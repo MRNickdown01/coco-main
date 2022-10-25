@@ -19,7 +19,16 @@ function Dashboard() {
     <div className="container">
       <div className="dashboard-main">
         <div className="dashboard-div d-flex justify-content-between">
-          <h3 className="title mt-5">COCO</h3>
+          <h3
+            className="title mt-5"
+            style={{
+              color: " #1c5a40",
+              fontSize: "31",
+              fontWeight: "700",
+            }}
+          >
+            COCO
+          </h3>
 
           <div className="user-avatar mt-5">
             <img
@@ -73,7 +82,7 @@ function Dashboard() {
                           <p class="fw-normal mb-1 yourtrees">₹ 1025</p>
                         </td>
                         <td>
-                          <span class="badge badge-success rounded-pill d-inline">
+                          <span class="badge badge-success rounded-pill d-inline-block ">
                             Code Generated
                           </span>
                         </td>
@@ -96,7 +105,7 @@ function Dashboard() {
                           <p class="fw-normal  mb-1 yourtrees">₹ 1025</p>
                         </td>
                         <td>
-                          <span class="badge badge-success rounded-pill d-inline">
+                          <span class="badge badge-success rounded-pill d-inline-block">
                             Code Generated
                           </span>
                         </td>
@@ -119,7 +128,7 @@ function Dashboard() {
                           <p class="fw-normal  mb-1 yourtrees">₹ 1025</p>
                         </td>
                         <td>
-                          <span class="badge badge-success rounded-pill d-inline">
+                          <span class="badge badge-success rounded-pill d-inline-block">
                             Code Generated
                           </span>
                         </td>

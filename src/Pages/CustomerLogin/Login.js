@@ -179,7 +179,7 @@ const Login = () => {
                       fontWeight: 600,
                     }}
                   >
-                    We have sent a magic link to your email
+                    Check Your Profile Now
                   </p>
                   <div className="form-outline mb-4 d-flex flex-row">
                     <input
