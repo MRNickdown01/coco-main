@@ -36,10 +36,31 @@ function Home() {
     };
   }, [windowDimenion]);
 
+  // useEffect(() => {}, []);
+  // async function login() {
+  //   let item = user.email.value.trim();
+  //   const response = await fetch(
+  //     "https://coco-backend1.herokuapp.com/addUser",
+  //     {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //         Accept: "application/json",
+  //         "Access-Control-Allow-Origin": "*",
+  //       },
+  //       body: JSON.stringify({ emailId: item }),
+  //     }
+  //   );
+  //   const data = await response.json();
+  //   console.log(data);
+  // }
+
   const onInputChange = (id, value) => {
     let _user = { ...user };
+
     _user[id].value = value;
     _user[id].error = false;
+
     setUser(_user);
   };
   const isEmailValid = (email) => {
@@ -63,6 +84,18 @@ function Home() {
 
     if (!userObjectHasError) {
       setState(!state);
+      let item = user.email.value.trim();
+      const response = fetch("https://coco-backend1.herokuapp.com/addUser", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+        body: JSON.stringify({ emailId: item }),
+      });
+      const data = response.json();
+      console.log(data);
     } else {
       setUser(_user);
     }
@@ -172,6 +205,22 @@ function Home() {
                     >
                       Register
                     </button>
+                    {/* <button
+                      onClick={login}
+                      type="button"
+                      className="btn  btn-lg"
+                      style={{
+                        fontFamily: "museo-sans",
+                        color: "white",
+                        backgroundColor: "#1C5A40",
+                        paddingLeft: "2.5rem",
+                        paddingRight: "2.5rem",
+                        width: "100%",
+                        marginBottom: "30px",
+                      }}
+                    >
+                      Register
+                    </button> */}
                   </div>
                 </>
               ) : (
