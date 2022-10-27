@@ -90,20 +90,20 @@ const Login = () => {
                 height: "auto",
               }}
             >
+              <h2
+                style={{
+                  marginBottom: "2rem",
+                  marginTop: "2rem",
+                  fontFamily: "museo-sans",
+                  fontWeight: "bold",
+                  color: "#1C5A40",
+                }}
+                className=""
+              >
+                Continue Your journey to <br /> be the change
+              </h2>
               {!state ? (
                 <>
-                  <h2
-                    style={{
-                      marginBottom: "2rem",
-                      marginTop: "2rem",
-                      fontFamily: "museo-sans",
-                      fontWeight: "bold",
-                      color: "#1C5A40",
-                    }}
-                    className=""
-                  >
-                    Continue Your journey to <br /> be the change
-                  </h2>
                   <label
                     style={{
                       fontFamily: "museo-sans",
@@ -172,69 +172,51 @@ const Login = () => {
                 </>
               ) : (
                 <>
-                  {/* <p
+                  <p
                     style={{
                       fontFamily: "museo-sans",
                       color: "#1C5A40",
                       fontWeight: 600,
                     }}
                   >
-                    Check Your Profile Now
-                  </p> */}
-                  <div className="form-outline mb-4 d-flex flex-column justify-content-center align-items-center">
-                    <img
-                      // style={{
-                      //   display
-                      // }}
-                      height={70}
-                      width={70}
-                      src="https://cdn-icons-png.flaticon.com/512/5839/5839838.png"
-                    />
-                    <h3
-                      style={{
-                        color: "#1C5A40",
-                        marginTop: "2rem",
-                      }}
-                    >
-                      Success Magic Link Send Your Email
-                    </h3>
-                    {/* <input
-                      style={{
-                        fontFamily: "museo-sans",
-                      }}
-                      disabled={edit}
-                      type="email"
-                      id="form3Example3"
-                      className="form-control form-control-lg"
-                    />
-                    <img
-                      onClick={() => setEdit(!edit)}
-                      style={{ marginLeft: "-3rem", marginTop: "0.5rem" }}
-                      height={30}
-                      width={30}
-                      src={pencil}
-                    /> */}
-                  </div>
-                  {/* <div className="text-center text-lg-start mt-4 pt-2">
-                    <a href="/dashboard">
+                    We have sent a magic link to your email
+                  </p>
+                  {
+                    <div className="form-outline mb-2 d-flex flex-row">
+                      <p
+                        style={{
+                          fontFamily: "museo-sans",
+                          border: "none",
+                          textAlign: "center",
+                        }}
+                        type="email"
+                        id="form3Example3"
+                        className="form-control form-control-lg"
+                      >
+                        {user.email.value}
+                      </p>
+                    </div>
+                  }
+                  <div className="text-center text-lg-start mt-1 pt-2">
+                    <a href="/Login">
                       <button
                         // onClick={onSubmit}
                         type="button"
                         className="btn  btn-lg"
                         style={{
                           fontFamily: "museo-sans",
-                          color: "white",
-                          backgroundColor: "#1C5A40",
+                          color: "#1C5A40",
+                          border: "2px dashed #0A3724",
                           paddingLeft: "2.5rem",
                           paddingRight: "2.5rem",
                           width: "100%",
                           marginBottom: "30px",
                         }}
                       >
-                        Get Started
+                        Change E-mail
                       </button>
                     </a>
-                  </div> */}
+                  </div>
                 </>
               )}
             </form>
