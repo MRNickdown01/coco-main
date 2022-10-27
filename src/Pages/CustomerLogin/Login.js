@@ -90,20 +90,20 @@ const Login = () => {
                 height: "auto",
               }}
             >
-              <h2
-                style={{
-                  marginBottom: "2rem",
-                  marginTop: "2rem",
-                  fontFamily: "museo-sans",
-                  fontWeight: "bold",
-                  color: "#1C5A40",
-                }}
-                className=""
-              >
-                Continue Your journey to <br /> be the change
-              </h2>
               {!state ? (
                 <>
+                  <h2
+                    style={{
+                      marginBottom: "2rem",
+                      marginTop: "2rem",
+                      fontFamily: "museo-sans",
+                      fontWeight: "bold",
+                      color: "#1C5A40",
+                    }}
+                    className=""
+                  >
+                    Continue Your journey to <br /> be the change
+                  </h2>
                   <label
                     style={{
                       fontFamily: "museo-sans",
@@ -172,7 +172,7 @@ const Login = () => {
                 </>
               ) : (
                 <>
-                  <p
+                  {/* <p
                     style={{
                       fontFamily: "museo-sans",
                       color: "#1C5A40",
@@ -180,9 +180,25 @@ const Login = () => {
                     }}
                   >
                     Check Your Profile Now
-                  </p>
-                  <div className="form-outline mb-4 d-flex flex-row">
-                    <input
+                  </p> */}
+                  <div className="form-outline mb-4 d-flex flex-column justify-content-center align-items-center">
+                    <img
+                      // style={{
+                      //   display
+                      // }}
+                      height={70}
+                      width={70}
+                      src="https://cdn-icons-png.flaticon.com/512/5839/5839838.png"
+                    />
+                    <h3
+                      style={{
+                        color: "#1C5A40",
+                        marginTop: "2rem",
+                      }}
+                    >
+                      Success Magic Link Send Your Email
+                    </h3>
+                    {/* <input
                       style={{
                         fontFamily: "museo-sans",
                       }}
@@ -197,9 +213,9 @@ const Login = () => {
                       height={30}
                       width={30}
                       src={pencil}
-                    />
+                    /> */}
                   </div>
-                  <div className="text-center text-lg-start mt-4 pt-2">
+                  {/* <div className="text-center text-lg-start mt-4 pt-2">
                     <a href="/dashboard">
                       <button
                         // onClick={onSubmit}
@@ -218,7 +234,7 @@ const Login = () => {
                         Get Started
                       </button>
                     </a>
-                  </div>
+                  </div> */}
                 </>
               )}
             </form>

@@ -12,8 +12,8 @@ function CompleteProfile() {
             height: "100vh",
             objectFit: "cover",
           }}
-          src={image}
-          className="h-100 w-100 "
+          src="https://images.unsplash.com/photo-1455218873509-8097305ee378?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+          className="h-100vh w-100 "
           alt="Sample image"
         />
       </div>
