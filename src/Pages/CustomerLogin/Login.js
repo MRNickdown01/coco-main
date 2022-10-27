@@ -188,6 +188,7 @@ const Login = () => {
                           fontFamily: "museo-sans",
                           border: "none",
                           textAlign: "center",
+                          color: "#1C5A40",
                         }}
                         type="email"
                         id="form3Example3"
@@ -206,7 +207,7 @@ const Login = () => {
                         style={{
                           fontFamily: "museo-sans",
                           color: "#1C5A40",
-                          border: "2px dashed #0A3724",
+                          border: "2px dashed #1C5A40",
                           paddingLeft: "2.5rem",
                           paddingRight: "2.5rem",
                           width: "100%",

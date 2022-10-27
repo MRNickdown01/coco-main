@@ -221,41 +221,39 @@ function Home() {
                   >
                     We have sent a magic link to your email
                   </p>
-                  <div className="form-outline mb-4 d-flex flex-row">
-                    <input
+                  <div className="form-outline mb-1 d-flex flex-row">
+                    <p
                       style={{
                         fontFamily: "museo-sans",
+                        border: "none",
+                        color: "#1C5A40",
+                        fontWeight: "500",
                       }}
                       disabled={edit}
                       type="email"
                       id="form3Example3"
                       className="form-control form-control-lg"
-                    />
-                    <img
-                      onClick={() => setEdit(!edit)}
-                      style={{ marginLeft: "-3rem", marginTop: "0.5rem" }}
-                      height={30}
-                      width={30}
-                      src={pencil}
-                    />
+                    >
+                      {user.email.value}
+                    </p>
                   </div>
-                  <div className="text-center text-lg-start mt-4 pt-2">
-                    <a href="/completeprofile">
+                  <div className="text-center text-lg-start mt-1 pt-2">
+                    <a href="/Register">
                       <button
                         // onClick={onSubmit}
                         type="button"
                         className="btn  btn-lg"
                         style={{
                           fontFamily: "museo-sans",
-                          color: "white",
-                          backgroundColor: "#1C5A40",
+                          color: "#1C5A40",
+                          border: "2px dashed #1C5A40",
                           paddingLeft: "2.5rem",
                           paddingRight: "2.5rem",
                           width: "100%",
                           marginBottom: "30px",
                         }}
                       >
-                        Get Started
+                        Change E-mail
                       </button>
                     </a>
                   </div>
