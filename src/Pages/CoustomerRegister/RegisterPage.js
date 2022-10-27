@@ -36,25 +36,6 @@ function Home() {
     };
   }, [windowDimenion]);
 
-  // useEffect(() => {}, []);
-  // async function login() {
-  //   let item = user.email.value.trim();
-  //   const response = await fetch(
-  //     "https://coco-backend1.herokuapp.com/addUser",
-  //     {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //         Accept: "application/json",
-  //         "Access-Control-Allow-Origin": "*",
-  //       },
-  //       body: JSON.stringify({ emailId: item }),
-  //     }
-  //   );
-  //   const data = await response.json();
-  //   console.log(data);
-  // }
-
   const onInputChange = (id, value) => {
     let _user = { ...user };
 
@@ -84,18 +65,24 @@ function Home() {
 
     if (!userObjectHasError) {
       setState(!state);
-      let item = user.email.value.trim();
-      const response = fetch("https://coco-backend1.herokuapp.com/addUser", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
-        body: JSON.stringify({ emailId: item }),
-      });
-      const data = response.json();
-      console.log(data);
+      async function login() {
+        let item = user.email.value.trim();
+        const response = await fetch(
+          "https://coco-backend1.herokuapp.com/addUser",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+              "Access-Control-Allow-Origin": "*",
+            },
+            body: JSON.stringify({ emailId: item }),
+          }
+        );
+        const data = await response.json();
+        console.log(data);
+      }
+      login();
     } else {
       setUser(_user);
     }
