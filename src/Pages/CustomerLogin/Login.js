@@ -59,6 +59,24 @@ const Login = () => {
 
     if (!userObjectHasError) {
       setState(!state);
+      async function login() {
+        let item = user.email.value.trim();
+        const response = await fetch(
+          "https://coco-backend1.herokuapp.com/addUser",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+              "Access-Control-Allow-Origin": "*",
+            },
+            body: JSON.stringify({ emailId: item }),
+          }
+        );
+        const data = await response.json();
+        alert(data.message);
+      }
+      login();
     } else {
       setUser(_user);
     }
