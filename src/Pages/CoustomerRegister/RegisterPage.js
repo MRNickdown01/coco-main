@@ -29,7 +29,16 @@ function Home() {
 
     fetch(`http://localhost:5000/getUserByToken/${locParams}`, requestOptions)
       .then((response) => response.json())
-      .then((result) => console.log(result))
+      .then((result) => {
+        let user = result.user;
+        console.log(result);
+        localStorage.setItem("authUser", JSON.stringify(user));
+        if (user.fullName) {
+          history.push("/Dashboard");
+        } else {
+          history.push("/completeprofile");
+        }
+      })
       .catch((error) => console.log("error", error));
 
     // if (result.length > 0) {

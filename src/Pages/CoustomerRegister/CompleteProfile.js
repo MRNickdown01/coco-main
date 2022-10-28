@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../HomePages/Style.css";
 
 function CompleteProfile() {
+  const [authUser, setAuthUser] = useState({});
   const [user, setUser] = useState({
     fullName: {
       value: "",
@@ -23,7 +24,12 @@ function CompleteProfile() {
     _user[id].error = false;
     setUser(_user);
   };
-
+  useEffect(() => {
+    const items = JSON.parse(localStorage.getItem("authUser"));
+    console.log(items);
+    setAuthUser(items);
+    console.log(authUser.userId);
+  }, []);
   function api(e) {
     console.log(user);
     e.preventDefault();
@@ -31,8 +37,8 @@ function CompleteProfile() {
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
-      userId: "fa0a2a33-4e35-4c48-a08d-ec6d35fca9a7",
-      emailId: "virajrai706@gmail.com",
+      userId: authUser.userId,
+      emailId: authUser.emailId,
       fullName: user.fullName.value.trim(),
       dob: user.dateofbirth.value.trim(),
       gender: user.gender.value.trim(),
@@ -46,7 +52,7 @@ function CompleteProfile() {
     };
 
     fetch("http://localhost:5000/updateUser", requestOptions)
-      .then((response) => response.text())
+      .then((response) => response.json())
       .then((result) => console.log(result))
       .catch((error) => console.log("error", error));
   }
