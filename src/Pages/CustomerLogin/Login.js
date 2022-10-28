@@ -93,19 +93,19 @@ const Login = () => {
                 style={{
                   marginBottom: "2rem",
                   marginTop: "2rem",
-                  fontFamily: "museo-sans",
+                  fontFamily: "poppins",
                   fontWeight: "bold",
                   color: "#1C5A40",
                 }}
                 className=""
               >
-                Continue Your journey to <br /> be the change
+                Every contribution matters
               </h2>
               {!state ? (
                 <>
                   <label
                     style={{
-                      fontFamily: "museo-sans",
+                      fontFamily: "poppins",
                     }}
                     className="mt-4 d-flex align-items-start"
                     htmlFor="form3Example3"
@@ -115,7 +115,7 @@ const Login = () => {
                   <div className="form-outline mb-4">
                     <input
                       style={{
-                        fontFamily: "museo-sans",
+                        fontFamily: "poppins",
                         outline: "none",
                         // borderStyle: "none",
                         borderColor: "#1C5A40",
@@ -132,7 +132,7 @@ const Login = () => {
                     {user["email"].error ? (
                       <div
                         style={{
-                          fontFamily: "museo-sans",
+                          fontFamily: "poppins",
                           textAlign: "left",
                         }}
                       >
@@ -156,7 +156,7 @@ const Login = () => {
                       type="button"
                       className="btn  btn-lg"
                       style={{
-                        fontFamily: "museo-sans",
+                        fontFamily: "poppins",
                         color: "white",
                         backgroundColor: "#1C5A40",
                         paddingLeft: "2.5rem",
@@ -173,7 +173,7 @@ const Login = () => {
                 <>
                   <p
                     style={{
-                      fontFamily: "museo-sans",
+                      fontFamily: "poppins",
                       color: "#1C5A40",
                       fontWeight: 600,
                     }}
@@ -184,7 +184,7 @@ const Login = () => {
                     <div className="form-outline mb-2 d-flex flex-row">
                       <p
                         style={{
-                          fontFamily: "museo-sans",
+                          fontFamily: "poppins",
                           border: "none",
                           textAlign: "center",
                           color: "#1C5A40",
@@ -204,7 +204,7 @@ const Login = () => {
                         type="button"
                         className="btn  btn-lg"
                         style={{
-                          fontFamily: "museo-sans",
+                          fontFamily: "poppins",
                           color: "#1C5A40",
                           border: "2px dashed #1C5A40",
                           paddingLeft: "2.5rem",

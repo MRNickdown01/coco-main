@@ -27,9 +27,11 @@ const HomePage = () => {
         <div className="nav-bar">
           <div className="header">
             <div className="logo d-flex justify-content-between">
-              <h3 className="title-logo  d-flex align-items-center pt-1">
-                COCO
-              </h3>
+              <a href="/">
+                <h3 className="title-logo  d-flex align-items-center pt-1">
+                  COCO
+                </h3>
+              </a>
               <div className="header-button d-flex align-items-center">
                 <a href="Login">
                   <h3 className="login pt-1">Login</h3>

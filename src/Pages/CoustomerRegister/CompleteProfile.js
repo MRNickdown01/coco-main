@@ -84,7 +84,7 @@ function CompleteProfile() {
             style={{
               marginBottom: "2rem",
               marginTop: "2rem",
-              fontFamily: "CenturyGothic",
+              fontFamily: "poppins",
               fontWeight: "bold",
               color: "#1C5A40",
             }}
@@ -95,7 +95,7 @@ function CompleteProfile() {
           <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
           <label
             style={{
-              fontFamily: "CenturyGothic",
+              fontFamily: "poppins",
             }}
             className="mt-4 d-flex align-items-start"
             htmlFor="form3Example3"
@@ -122,7 +122,7 @@ function CompleteProfile() {
           </div>
           <label
             style={{
-              fontFamily: "CenturyGothic",
+              fontFamily: "poppins",
             }}
             className="mt-4 d-flex align-items-start"
             htmlFor="form3Example3"
@@ -189,7 +189,7 @@ function CompleteProfile() {
               type="button"
               className="btn  btn-lg"
               style={{
-                fontFamily: "CenturyGothic",
+                fontFamily: "poppins",
                 color: "white",
                 backgroundColor: "#1C5A40",
                 paddingLeft: "2.5rem",

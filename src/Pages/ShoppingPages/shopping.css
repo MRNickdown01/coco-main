@@ -24,7 +24,7 @@
   text-decoration: none;
 }
 .header-button > a > .login {
-  font-size: 20px;
+  font-size: 22px;
   color: #292f36;
   font-family: "museo-sans", sans-serif;
   font-weight: 600;
@@ -34,7 +34,7 @@
 .header-button > .sign-in:hover {
   transform: scale(1.1);
 }
-.header-button > .login:hover {
+.header-button > a > .login:hover {
   color: #0a7986;
 }
 .header-button {
@@ -203,6 +203,9 @@
 }
 .header {
   margin: 20px 0px;
+}
+.header > .logo > a {
+  text-decoration: none;
 }
 .title-logo {
   color: #1c5a40;
