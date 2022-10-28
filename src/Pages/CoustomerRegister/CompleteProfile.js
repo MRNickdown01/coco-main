@@ -11,11 +11,7 @@ function CompleteProfile() {
       value: "",
       error: false,
     },
-    male: {
-      value: "",
-      error: false,
-    },
-    female: {
+    gender: {
       value: "",
       error: false,
     },
@@ -39,7 +35,7 @@ function CompleteProfile() {
       emailId: "virajrai706@gmail.com",
       fullName: user.fullName.value.trim(),
       dob: user.dateofbirth.value.trim(),
-      gender: user.male.value.trim(),
+      gender: user.gender.value.trim(),
     });
 
     var requestOptions = {
@@ -158,7 +154,7 @@ function CompleteProfile() {
                 value="male"
                 onChange={(e) => {
                   let value = e.target.value;
-                  onInputChange("male", value);
+                  onInputChange("gender", value);
                 }}
               />
               <label className="form-check-label" htmlFor="inlineRadio1">
@@ -174,7 +170,7 @@ function CompleteProfile() {
                 value="female"
                 onChange={(e) => {
                   let value = e.target.value;
-                  onInputChange("female", value);
+                  onInputChange("gender", value);
                 }}
               />
               <label className="form-check-label" htmlFor="inlineRadio2">
