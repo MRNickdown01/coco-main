@@ -1,8 +1,60 @@
-import React from "react";
-import image from "./assets/Image.png";
+import React, { useState } from "react";
 import "../HomePages/Style.css";
-import $ from "jquery";
+
 function CompleteProfile() {
+  const [user, setUser] = useState({
+    fullName: {
+      value: "",
+      error: false,
+    },
+    dateofbirth: {
+      value: "",
+      error: false,
+    },
+    male: {
+      value: "",
+      error: false,
+    },
+    female: {
+      value: "",
+      error: false,
+    },
+  });
+
+  const onInputChange = (id, value) => {
+    let _user = { ...user };
+    _user[id].value = value;
+    _user[id].error = false;
+    setUser(_user);
+  };
+
+  function api(e) {
+    console.log(user);
+    e.preventDefault();
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({
+      userId: "fa0a2a33-4e35-4c48-a08d-ec6d35fca9a7",
+      emailId: "virajrai706@gmail.com",
+      fullName: user.fullName.value.trim(),
+      dob: user.dateofbirth.value.trim(),
+      gender: user.male.value.trim(),
+    });
+
+    var requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    };
+
+    fetch("http://localhost:5000/updateUser", requestOptions)
+      .then((response) => response.text())
+      .then((result) => console.log(result))
+      .catch((error) => console.log("error", error));
+  }
+
   return (
     <div className="funny">
       <div className=" col-sm-12 col-md-6 col-lg-6 ">
@@ -19,6 +71,7 @@ function CompleteProfile() {
       </div>
       <div className=" col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center p-3">
         <form
+          onSubmit={api}
           style={{
             boxShadow: " 0px 4px 22px 0px #0000001A",
             borderRadius: "14px",
@@ -57,10 +110,10 @@ function CompleteProfile() {
                 // borderStyle: "none",
                 borderColor: "#1C5A40",
               }}
-              //   onChange={(e) => {
-              //     let value = e.target.value;
-              //     onInputChange("email", value);
-              //   }}
+              onChange={(e) => {
+                let value = e.target.value;
+                onInputChange("fullName", value);
+              }}
               type="email"
               id="form3Example3"
               className="form-control form-control-lg"
@@ -87,6 +140,10 @@ function CompleteProfile() {
               id="form3Example3"
               className="form-control form-control-lg"
               placeholder="DOB"
+              onChange={(e) => {
+                let value = e.target.value;
+                onInputChange("dateofbirth", value);
+              }}
             />
           </div>
 
@@ -98,7 +155,11 @@ function CompleteProfile() {
                 type="radio"
                 name="inlineRadioOptions"
                 id="inlineRadio1"
-                defaultValue="option1"
+                value="male"
+                onChange={(e) => {
+                  let value = e.target.value;
+                  onInputChange("male", value);
+                }}
               />
               <label className="form-check-label" htmlFor="inlineRadio1">
                 Male
@@ -110,7 +171,11 @@ function CompleteProfile() {
                 type="radio"
                 name="inlineRadioOptions"
                 id="inlineRadio2"
-                defaultValue="option2"
+                value="female"
+                onChange={(e) => {
+                  let value = e.target.value;
+                  onInputChange("female", value);
+                }}
               />
               <label className="form-check-label" htmlFor="inlineRadio2">
                 Female
@@ -120,7 +185,7 @@ function CompleteProfile() {
 
           <div className="text-center text-lg-start mt-4 pt-2">
             <button
-              //   onClick={onSubmit}
+              onClick={api}
               type="button"
               className="btn  btn-lg"
               style={{
