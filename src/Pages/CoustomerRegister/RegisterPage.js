@@ -15,7 +15,7 @@ function Home() {
       error: false,
     },
   });
-  //ye useeffect
+
   useEffect(() => {
     let locParams = location.search;
     locParams = locParams.split("?token=")[1];
@@ -27,25 +27,22 @@ function Home() {
       },
     };
 
-    fetch(`http://localhost:5000/getUserByToken/${locParams}`, requestOptions)
+    fetch(
+      `https://coco-backend1.herokuapp.com/getUserByToken/${locParams}`,
+      requestOptions
+    )
       .then((response) => response.json())
       .then((result) => {
         let user = result.user;
         console.log(result);
         localStorage.setItem("authUser", JSON.stringify(user));
         if (user.fullName) {
-          history.push("/Dashboard");
+          history.push(`/Dashboard?token=${locParams}`);
         } else {
           history.push("/completeprofile");
         }
       })
       .catch((error) => console.log("error", error));
-
-    // if (result.length > 0) {
-    //   history.push("/completeprofile");
-    // } else {
-    //   history.push("/Dashboard");
-    // }
   }, []);
 
   const onInputChange = (id, value) => {

@@ -51,7 +51,7 @@ function CompleteProfile() {
       redirect: "follow",
     };
 
-    fetch("http://localhost:5000/updateUser", requestOptions)
+    fetch("https://coco-backend1.herokuapp.com/updateUser", requestOptions)
       .then((response) => response.json())
       .then((result) => console.log(result))
       .catch((error) => console.log("error", error));
