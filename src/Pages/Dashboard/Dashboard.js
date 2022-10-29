@@ -28,17 +28,16 @@ function Dashboard() {
       },
     };
 
-    fetch(
-      `https://coco-backend1.herokuapp.com/getUserByToken/${locParams}`,
-      requestOptions
-    )
+    fetch(`http://localhost:5000/getUserByToken/${locParams}`, requestOptions)
       .then((response) => response.json())
       .then((result) => {
         let user = result.user;
         setUser(user);
       });
   }, []);
-
+  if (!user) {
+    return <>loading..</>;
+  }
   return (
     <div className="container">
       <div className="dashboard-main">
