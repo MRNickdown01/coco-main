@@ -1,7 +1,6 @@
 import React from "react";
-
+import { useEffect, useState } from "react";
 import leaves from "./assets/leaves.png";
-import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -12,9 +11,36 @@ import brand1 from "./assets/brand1.png";
 import brand2 from "./assets/brand2.png";
 import { ContentCopy } from "@mui/icons-material";
 import "../Dashboard/assets/Style.css";
-function Dashboard() {
-  const theme = useTheme();
+import { useLocation } from "react-router-dom";
 
+function Dashboard() {
+  const location = useLocation();
+  const [user, setUser] = useState();
+
+  useEffect(() => {
+    let locParams = location.search;
+    locParams = locParams.split("?token=")[1];
+    console.log(locParams, "abcd");
+    var requestOptions = {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    fetch(
+      `https://coco-backend1.herokuapp.com/getUserByToken/${locParams}`,
+      requestOptions
+    )
+      .then((response) => response.json())
+      .then((result) => {
+        let user = result.user;
+        setUser(user);
+      });
+  }, []);
+  if (!user) {
+    return <>loading..</>;
+  }
   return (
     <div className="container">
       <div className="dashboard-main">
@@ -38,7 +64,10 @@ function Dashboard() {
             />
           </div>
         </div>
-        <h4 className="d-flex justify-content-start">Hello Romil</h4>
+        <h4 className="d-flex justify-content-start">Hello {user.fullName}</h4>
+        <h4 className="d-flex justify-content-start">
+          EmailId: {user.emailId} <br /> id : {user.token}
+        </h4>
         <div className="container">
           <div className="card" id="dashboard-main-card">
             <div className="card-boddy">

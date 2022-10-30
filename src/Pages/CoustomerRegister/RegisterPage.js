@@ -1,13 +1,12 @@
 import React from "react";
-
-// import "./App.css";
-
-import image from "./assets/Image.png";
 import { useState, useEffect } from "react";
-import pencil from "./assets/pencil.png";
 import "../HomePages/Style.css";
+import { useLocation } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function Home() {
+  const history = useHistory();
+  const location = useLocation();
   const [state, setState] = useState(false);
   const [edit, setEdit] = useState(true);
   const [user, setUser] = useState({
@@ -16,29 +15,38 @@ function Home() {
       error: false,
     },
   });
-  const [windowDimenion, detectHW] = useState({
-    winWidth: window.innerWidth,
-    winHeight: window.innerHeight,
-  });
-
-  const detectSize = () => {
-    detectHW({
-      winWidth: window.innerWidth,
-      winHeight: window.innerHeight,
-    });
-  };
 
   useEffect(() => {
-    window.addEventListener("resize", detectSize);
-
-    return () => {
-      window.removeEventListener("resize", detectSize);
+    let locParams = location.search;
+    locParams = locParams.split("?token=")[1];
+    console.log(locParams, "abcd");
+    var requestOptions = {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
     };
-  }, [windowDimenion]);
+
+    fetch(
+      `https://coco-backend1.herokuapp.com/getUserByToken/${locParams}`,
+      requestOptions
+    )
+      .then((response) => response.json())
+      .then((result) => {
+        let user = result.user;
+        console.log(result);
+        localStorage.setItem("authUser", JSON.stringify(user));
+        if (user.fullName) {
+          history.push(`/Dashboard?token=${locParams}`);
+        } else {
+          history.push("/completeprofile");
+        }
+      })
+      .catch((error) => console.log("error", error));
+  }, []);
 
   const onInputChange = (id, value) => {
     let _user = { ...user };
-
     _user[id].value = value;
     _user[id].error = false;
 
