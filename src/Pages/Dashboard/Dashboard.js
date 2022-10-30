@@ -28,7 +28,10 @@ function Dashboard() {
       },
     };
 
-    fetch(`http://localhost:5000/getUserByToken/${locParams}`, requestOptions)
+    fetch(
+      `https://coco-backend1.herokuapp.com/getUserByToken/${locParams}`,
+      requestOptions
+    )
       .then((response) => response.json())
       .then((result) => {
         let user = result.user;
