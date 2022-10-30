@@ -36,7 +36,8 @@ function Dashboard() {
       .then((result) => {
         let user = result.user;
         setUser(user);
-      });
+      })
+      .catch((error) => console.log("error", error));
   }, []);
   if (!user) {
     return <>loading..</>;
