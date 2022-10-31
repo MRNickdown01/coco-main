@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "../HomePages/Style.css";
+import { useLocation } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function CompleteProfile() {
+  const history = useHistory();
+  const location = useLocation();
   const [authUser, setAuthUser] = useState({});
   const [user, setUser] = useState({
     fullName: {
@@ -31,6 +35,9 @@ function CompleteProfile() {
     console.log(authUser.userId);
   }, []);
   function api(e) {
+    let locParams = location.search;
+    locParams = locParams.split("?token=")[1];
+    console.log(locParams, "abcd");
     console.log(user);
     e.preventDefault();
     var myHeaders = new Headers();
@@ -53,6 +60,14 @@ function CompleteProfile() {
 
     fetch("https://coco-backend1.herokuapp.com/updateUser", requestOptions)
       .then((response) => response.json())
+      .then((response) => {
+        const data = response;
+        console.log(data);
+        alert(data.message);
+        if (data.message) {
+          history.push(`/Dashboard?token=${locParams}`);
+        }
+      })
       .then((result) => console.log(result))
       .catch((error) => console.log("error", error));
   }

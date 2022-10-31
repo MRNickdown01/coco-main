@@ -39,7 +39,7 @@ function Home() {
         if (user.fullName) {
           history.push(`/Dashboard?token=${locParams}`);
         } else {
-          history.push("/completeprofile");
+          history.push(`/completeprofile?token=${locParams}`);
         }
       })
       .catch((error) => console.log("error", error));
