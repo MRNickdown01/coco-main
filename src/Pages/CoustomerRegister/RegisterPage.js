@@ -8,7 +8,7 @@ function Home() {
   const history = useHistory();
   const location = useLocation();
   const [state, setState] = useState(false);
-  const [edit, setEdit] = useState(true);
+
   const [user, setUser] = useState({
     email: {
       value: "",
@@ -238,7 +238,7 @@ function Home() {
                         color: "#1C5A40",
                         fontWeight: "500",
                       }}
-                      disabled={edit}
+                      disabled={true}
                       type="email"
                       id="form3Example3"
                       className="form-control form-control-lg"
