@@ -12,7 +12,7 @@
 .card {
   width: auto;
   height: auto;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
   box-shadow: 0px 4px 8px rgb(0 0 0 / 16%);
   border-radius: 16px;
 }
@@ -93,5 +93,8 @@
   }
   .badge-success {
     display: inline-block;
+  }
+  .viewall {
+    display: inline-flex;
   }
 }

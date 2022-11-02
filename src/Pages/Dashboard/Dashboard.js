@@ -10,8 +10,8 @@ import Typography from "@mui/material/Typography";
 import brand1 from "./assets/brand1.png";
 import brand2 from "./assets/brand2.png";
 import { ContentCopy } from "@mui/icons-material";
-import "../Dashboard/assets/Style.css";
 import { useLocation } from "react-router-dom";
+import "../Dashboard/assets/Style.css";
 
 function Dashboard() {
   const location = useLocation();
@@ -74,10 +74,12 @@ function Dashboard() {
             <div className="card-boddy">
               <div className="user-info d-flex justify-content-between">
                 <div className="title-card-head">
-                  <h4 className="title d-flex justify-content-start mt-4">
+                  <h4 className="title-dashboard-main d-flex justify-content-start mt-4 ms-3">
                     Transaction
                   </h4>
-                  <p>Link a bank account and withdraw earnings from</p>
+                  <p className="d-flex justify-content-start ms-3">
+                    Link a bank account and withdraw earnings from
+                  </p>
                 </div>
                 <div className="user-avatar mt-4">
                   <img
@@ -166,13 +168,15 @@ function Dashboard() {
                     </tbody>
                   </table>
                   <Button
+                    className="viewall ms-5"
                     style={{
                       backgroundColor: "#0A3724",
                       borderRadius: "10px",
+                      padding: "10px",
                       width: "220px",
                       color: "#fff",
                       marginTop: "15px",
-                      display: "inline-flex",
+                      display: "flex",
                     }}
                   >
                     view All
@@ -183,7 +187,7 @@ function Dashboard() {
           </div>
 
           <div className="coupons mb-5">
-            <h4 className="title d-flex justify-content-start mt-5 ">
+            <h4 className="title-dashboard d-flex justify-content-start mt-5 ms-4">
               My Coupons
             </h4>
             <div

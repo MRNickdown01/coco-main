@@ -164,7 +164,14 @@ function CompleteProfile() {
             />
           </div>
 
-          <label>Gender</label>
+          <label
+            style={{
+              paddingBottom: "6px",
+              fontWeight: "600",
+            }}
+          >
+            Gender
+          </label>
           <div>
             <div className="form-check form-check-inline">
               <input
