@@ -48,12 +48,23 @@ const HomePage = () => {
         <div className="banner">
           <div className="bannerImage">
             <div className="bannerInfo">
-              <h4>Ahhhhh </h4>
-              <div className="bannertitle">
+              <h4>Get Discounts</h4>
+              {/* <div className="bannertitle">
                 <h3>That cash back feeling</h3>
                 <p>
                   With Ibotta, you can get cash back every time you shop.
                   <br /> We make it easy, fast, and safe to save big.
+                </p>
+              </div> */}
+              <div className="text-wrapper">
+                <p className="text-animation">
+                  Feed a Dog
+                  <br />
+                  <br />
+                  Plant a Tree
+                  <br />
+                  <br />
+                  Recycle Plastic
                 </p>
               </div>
             </div>

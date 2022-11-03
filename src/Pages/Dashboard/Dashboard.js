@@ -197,6 +197,7 @@ function Dashboard() {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
+                      width: "180px",
                     }}
                   >
                     <CardMedia
@@ -206,7 +207,13 @@ function Dashboard() {
                     />
                   </CardContent>
                 </Box>
-                <CardContent>
+                <CardContent
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                  }}
+                >
                   <Typography
                     component="div"
                     variant="h5"
@@ -218,7 +225,14 @@ function Dashboard() {
                   >
                     Get 15% Off
                   </Typography>
-                  <CardActions>
+                  <CardContent
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      padding: "0px",
+                      columnGap: "32px",
+                    }}
+                  >
                     <Typography
                       component="div"
                       variant="p"
@@ -243,7 +257,7 @@ function Dashboard() {
                       <br />
                       10%
                     </Typography>
-                  </CardActions>
+                  </CardContent>
                   <Button
                     sx={{
                       backgroundColor: "rgba(0, 0, 0, 0.16)",
@@ -271,6 +285,7 @@ function Dashboard() {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
+                      width: "180px",
                     }}
                   >
                     <CardMedia
@@ -280,7 +295,13 @@ function Dashboard() {
                     />
                   </CardContent>
                 </Box>
-                <CardContent>
+                <CardContent
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                  }}
+                >
                   <Typography
                     component="div"
                     variant="h5"
@@ -292,7 +313,14 @@ function Dashboard() {
                   >
                     Get 15% Off
                   </Typography>
-                  <CardActions>
+                  <CardContent
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      padding: "0px",
+                      columnGap: "32px",
+                    }}
+                  >
                     <Typography
                       component="div"
                       variant="p"
@@ -317,7 +345,7 @@ function Dashboard() {
                       <br />
                       10%
                     </Typography>
-                  </CardActions>
+                  </CardContent>
                   <Button
                     sx={{
                       backgroundColor: "#EAFFF6",
@@ -345,6 +373,7 @@ function Dashboard() {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
+                      width: "180px",
                     }}
                   >
                     <CardMedia
@@ -354,7 +383,13 @@ function Dashboard() {
                     />
                   </CardContent>
                 </Box>
-                <CardContent>
+                <CardContent
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                  }}
+                >
                   <Typography
                     component="div"
                     variant="h5"
@@ -366,7 +401,14 @@ function Dashboard() {
                   >
                     Get 15% Off
                   </Typography>
-                  <CardActions>
+                  <CardContent
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      padding: "0px",
+                      columnGap: "32px",
+                    }}
+                  >
                     <Typography
                       component="div"
                       variant="p"
@@ -391,7 +433,7 @@ function Dashboard() {
                       <br />
                       10%
                     </Typography>
-                  </CardActions>
+                  </CardContent>
                   <Button
                     sx={{
                       backgroundColor: "rgba(0, 0, 0, 0.16)",
@@ -419,17 +461,23 @@ function Dashboard() {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
+                      width: "180px",
                     }}
                   >
                     <CardMedia
-                      className="cardLogo"
                       component="img"
                       image={brand2}
                       alt="Live from space album cover"
                     />
                   </CardContent>
                 </Box>
-                <CardContent>
+                <CardContent
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                  }}
+                >
                   <Typography
                     component="div"
                     variant="h5"
@@ -441,7 +489,14 @@ function Dashboard() {
                   >
                     Get 15% Off
                   </Typography>
-                  <CardActions>
+                  <CardContent
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      padding: "0px",
+                      columnGap: "32px",
+                    }}
+                  >
                     <Typography
                       component="div"
                       variant="p"
@@ -466,7 +521,7 @@ function Dashboard() {
                       <br />
                       10%
                     </Typography>
-                  </CardActions>
+                  </CardContent>
                   <Button
                     sx={{
                       backgroundColor: "#EAFFF6",
@@ -494,16 +549,23 @@ function Dashboard() {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
+                      width: "180px",
                     }}
                   >
                     <CardMedia
                       component="img"
-                      src="https://upload.wikimedia.org/wikipedia/commons/5/59/NESCAF%C3%89_-_logo.png"
+                      src="https://i.pinimg.com/550x/cc/a3/7b/cca37b12ba6f2258cc055202ceccc2f9.jpg"
                       alt="Live from space album cover"
                     />
                   </CardContent>
                 </Box>
-                <CardContent>
+                <CardContent
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                  }}
+                >
                   <Typography
                     component="div"
                     variant="h5"
@@ -515,7 +577,14 @@ function Dashboard() {
                   >
                     Get 15% Off
                   </Typography>
-                  <CardActions>
+                  <CardContent
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      padding: "0px",
+                      columnGap: "32px",
+                    }}
+                  >
                     <Typography
                       component="div"
                       variant="p"
@@ -540,7 +609,7 @@ function Dashboard() {
                       <br />
                       10%
                     </Typography>
-                  </CardActions>
+                  </CardContent>
                   <Button
                     sx={{
                       backgroundColor: "rgba(0, 0, 0, 0.16)",
@@ -568,17 +637,23 @@ function Dashboard() {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
+                      width: "180px",
                     }}
                   >
                     <CardMedia
                       component="img"
-                      img
-                      src="https://upload.wikimedia.org/wikipedia/commons/5/59/NESCAF%C3%89_-_logo.png"
+                      src="https://i.pinimg.com/550x/cc/a3/7b/cca37b12ba6f2258cc055202ceccc2f9.jpg"
                       alt="Live from space album cover"
                     />
                   </CardContent>
                 </Box>
-                <CardContent>
+                <CardContent
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                  }}
+                >
                   <Typography
                     component="div"
                     variant="h5"
@@ -590,7 +665,14 @@ function Dashboard() {
                   >
                     Get 15% Off
                   </Typography>
-                  <CardActions>
+                  <CardContent
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      padding: "0px",
+                      columnGap: "32px",
+                    }}
+                  >
                     <Typography
                       component="div"
                       variant="p"
@@ -615,7 +697,7 @@ function Dashboard() {
                       <br />
                       10%
                     </Typography>
-                  </CardActions>
+                  </CardContent>
                   <Button
                     sx={{
                       backgroundColor: "#EAFFF6",
