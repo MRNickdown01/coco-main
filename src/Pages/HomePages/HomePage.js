@@ -88,7 +88,7 @@ const HomePage = () => {
               </div> */}
 
               <p className="animate-text">
-                <span>Feed A Dog </span>
+                <span>Feed a Dog </span>
                 <span>Plant a Tree</span>
                 <span>Recycle Plastic</span>
               </p>
