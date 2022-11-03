@@ -41,7 +41,20 @@
   text-align: right;
   color: #545e7a;
 }
-
+.table-responsive > .viewall {
+  background-color: #0a3724;
+  border-radius: 10px;
+  padding: 10px;
+  width: 220px;
+  color: #fff;
+  margin-top: 15px;
+  display: flex;
+  margin-left: 2.5rem;
+}
+.table-responsive > :hover .viewall {
+  background-color: #0a3724;
+  color: #fff;
+}
 @media screen and (max-width: 768px) {
   #no-more-tables tbody,
   #noimore-tables-open tbody,
@@ -94,7 +107,8 @@
   .badge-success {
     display: inline-block;
   }
-  .viewall {
-    display: inline-flex;
+  .table-responsive > .viewall {
+    display: initial;
+    margin-left: 0;
   }
 }

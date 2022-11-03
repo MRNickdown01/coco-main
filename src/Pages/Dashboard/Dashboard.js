@@ -167,20 +167,7 @@ function Dashboard() {
                       </tr>
                     </tbody>
                   </table>
-                  <Button
-                    className="viewall ms-5"
-                    style={{
-                      backgroundColor: "#0A3724",
-                      borderRadius: "10px",
-                      padding: "10px",
-                      width: "220px",
-                      color: "#fff",
-                      marginTop: "15px",
-                      display: "flex",
-                    }}
-                  >
-                    view All
-                  </Button>
+                  <Button className="viewall">view All</Button>
                 </div>
               </div>
             </div>
