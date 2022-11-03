@@ -401,3 +401,48 @@ body {
     top: 95%;
   }
 }
+
+
+
+
+/* text animation css here */
+
+.animate-text{
+	margin:0;
+	overflow: hidden;
+}
+p span{
+    font-size: 40px;
+    color:#ff2c45;
+    font-weight: 700;
+    display: inline-block;
+    line-height: 46px;
+    display: none;
+}
+
+ p span.text-in{
+	display: block;
+	animation: textIn .5s ease;
+}
+ p span.text-out{
+	animation: textOut .5s ease;
+}
+@keyframes textIn{
+	0%{
+		transform: translateY(100%);
+	}
+	100%{
+		transform: translateY(0%);
+	}
+}
+@keyframes textOut{
+	0%{
+		transform: translateY(0%);
+	}
+	100%{
+		transform: translateY(-100%);
+
+	}
+}
+
+
