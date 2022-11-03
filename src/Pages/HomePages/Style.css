@@ -39,40 +39,42 @@ body {
   color: rgb(81, 140, 123);
   margin: 0px;
 } */
-.text-wrapper {
-  font-size: 30px;
-  position: iniline-block;
-  height: 60px;
+
+.animate-text {
+  margin: 0;
   overflow: hidden;
-  text-align: center;
-  width: 100%;
-  left: 0px;
-  color: #0a7986;
-  margin: 0px;
 }
-.text-animation {
-  display: inline-block;
+p span {
   font-size: 60px;
-  animation: textIn 8s infinite;
+  color: #ff2c45;
   font-weight: 700;
-  letter-spacing: 2px;
-  text-shadow: -1px 1px 0 rgb(58, 58, 58), 1px 1px 0 rgb(170, 168, 168),
-    1px -1px 0 #000, -1px -1px 0 #000;
+  display: inline-block;
+  display: none;
 }
 
+p span.text-in {
+  display: block;
+  animation: textIn 0.5s ease;
+}
+p span.text-out {
+  animation: textOut 0.5s ease;
+}
 @keyframes textIn {
   0% {
-    transform: translateY(0px);
+    transform: translateY(100%);
   }
-  50% {
-    transform: translateY(-200px);
-  }
-
   100% {
-    transform: translateY(-390px);
+    transform: translateY(0%);
   }
 }
-
+@keyframes textOut {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
 .bannerInfo > h4 {
   font-size: 80px;
   font-weight: 900;
@@ -372,7 +374,7 @@ body {
   .bannerInfo > h4 {
     font-size: 55px;
   }
-  .text-animation {
+  p > span {
     font-size: 50px;
   }
 }

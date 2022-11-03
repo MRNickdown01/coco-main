@@ -14,6 +14,36 @@ const HomePage = () => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
     setnav(localStorage.getItem("prevVisit"));
     setState(localStorage.getItem("prevVisit"));
+
+    // text Animation //
+    const txts = document.querySelector(".animate-text").children;
+
+    let txtsLen = txts.length;
+    let index = 0;
+    const textInTimer = 3000,
+      textOutTimer = 2800;
+
+    function animateText() {
+      for (let i = 0; i < txtsLen; i++) {
+        txts[i].classList.remove("text-in", "text-out");
+      }
+      txts[index].classList.add("text-in");
+
+      setTimeout(function () {
+        txts[index].classList.add("text-out");
+      }, textOutTimer);
+
+      setTimeout(function () {
+        if (index == txtsLen - 1) {
+          index = 0;
+        } else {
+          index++;
+        }
+        animateText();
+      }, textInTimer);
+    }
+
+    animateText();
   }, [state]);
 
   const handleClick = () => {
@@ -56,17 +86,12 @@ const HomePage = () => {
                   <br /> We make it easy, fast, and safe to save big.
                 </p>
               </div> */}
-              <div className="text-wrapper">
-                <p className="text-animation">
-                  Feed a Dog
-                  <br />
-                  <br />
-                  Plant a Tree
-                  <br />
-                  <br />
-                  Recycle Plastic
-                </p>
-              </div>
+
+              <p className="animate-text">
+                <span>Feed A Dog </span>
+                <span>Plant a Tree</span>
+                <span>Recycle Plastic</span>
+              </p>
             </div>
             <div className="scrollDown">
               <button onClick={handleClick}>Tell Me More</button>
